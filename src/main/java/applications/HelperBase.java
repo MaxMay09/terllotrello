@@ -9,13 +9,18 @@ public class HelperBase {
     public HelperBase(WebDriver wd) {
         this.wd = wd;
     }
+
     public void click(By locator){
         wd.findElement(locator).click();
     }
-    public void type(By locator, String text){
-        wd.findElement(locator).click();
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+
+    public void type(By locator, String text) {
+        if (text!= null) {
+            wd.findElement(locator).click();
+            pause(2000);
+            wd.findElement(locator).clear();
+            wd.findElement(locator).sendKeys(text);
+        }
     }
     public void pause(int time){
         try {

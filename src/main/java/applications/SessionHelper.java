@@ -24,4 +24,16 @@ public class SessionHelper extends HelperBase{
         click(By.xpath("//span[text()='Log in']"));
         pause(3000);
     }
+
+    public void clickOnAvatar() {
+        click(By.cssSelector(".DweEFaF5owOe02.V_PnoJ2AynVwLp.G6CmOLx93OUZez"));
+    }
+
+    public void clickOnLogOut() {
+        click(By.xpath("(//span[normalize-space()='Log out'])[1]"));
+    }
+
+    public void clickConfirm() {
+        click(By.xpath("//button[@id='logout-submit']"));
+    }
 }
